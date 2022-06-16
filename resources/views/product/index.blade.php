@@ -11,25 +11,25 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <table class="w-full">
                     <thead>
-                        <thead>
-                            <tr class="">
-                                <th class="">#</th>
-                                <th class="">Name</th>
-                                <th class="">Action</th>
-                            </tr>
-                        </thead>
+                        <tr class="">
+                            <th class="">#</th>
+                            <th class="">Name</th>
+                            <th class="">Category</th>
+                            <th class="">Action</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        @foreach ($categories as $category)
+                        @foreach ($products as $product)
                             <tr class="">
-                                <td class="">{{ $category->id }}</td>
-                                <td class="">{{ $category->name }}</td>
+                                <td class="">{{ $product->id }}</td>
+                                <td class="">{{ $product->name }}</td>
+                                <td class="">{{ $product->category }}</td>
                                 <td class="">Detail | Edit | Delete</td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
-                {{ $categories->links() }}
+                {{ $products->links() }}
             </div>
         </div>
     </div>

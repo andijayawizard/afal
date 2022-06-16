@@ -14,7 +14,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $text = 'List';
+        $products = Product::select('products.*', 'categories.name as category')
+            ->join('categories', 'categories.id', '=', 'products.category_id')
+            ->latest()
+            ->paginate(10);
+        return view('product.index')->with('text', $text)->with('products', $products);
     }
 
     /**

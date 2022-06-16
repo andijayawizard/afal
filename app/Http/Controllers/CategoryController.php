@@ -15,7 +15,8 @@ class CategoryController extends Controller
     public function index()
     {
         $text = 'List';
-        return view('category.index')->with('text', $text);
+        $categories = Category::latest()->paginate(10);
+        return view('category.index')->with('text', $text)->with('categories', $categories);
     }
 
     /**
