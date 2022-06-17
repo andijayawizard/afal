@@ -9,18 +9,18 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <table class="w-full">
-                    <thead>
+                <table class="min-w-full">
+                    <thead class="border-b bg-gray-800">
                         <tr class="">
-                            <th class="">#</th>
-                            <th class="">Name</th>
-                            <th class="">Category</th>
-                            <th class="">Action</th>
+                            <th scope="col" class="text-sm font-medium text-white px-4 py-2">#</th>
+                            <th scope="col" class="text-sm font-medium text-white px-4 py-2">Name</th>
+                            <th scope="col" class="text-sm font-medium text-white px-4 py-2">Category</th>
+                            <th scope="col" class="text-sm font-medium text-white px-4 py-2">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($products as $product)
-                            <tr class="">
+                            <tr class="border-b transition duration-300 ease-in-out hover:bg-gray-100">
                                 <td class="">{{ $product->id }}</td>
                                 <td class="">{{ $product->name }}</td>
                                 <td class="">{{ $product->category }}</td>
