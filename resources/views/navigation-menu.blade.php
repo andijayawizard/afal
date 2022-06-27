@@ -16,16 +16,6 @@
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('category.index') }}" :active="request()->routeIs('category')">
-                        {{ __('Category') }}
-                    </x-jet-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('product.index') }}" :active="request()->routeIs('product')">
-                        {{ __('Product') }}
-                    </x-jet-nav-link>
-                </div>
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
                     <x-jet-dropdown align="right" width="48">
                         <x-slot name="trigger">
@@ -59,6 +49,9 @@
                             </x-jet-dropdown-link>
                             <x-jet-dropdown-link href="{{ route('product.index') }}">
                                 {{ __('Product') }}
+                            </x-jet-dropdown-link>
+                            <x-jet-dropdown-link href="{{ route('car.index') }}">
+                                {{ __('Car') }}
                             </x-jet-dropdown-link>
                         </x-slot>
                     </x-jet-dropdown>
