@@ -14,7 +14,11 @@ class SubCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $text = 'List';
+        $subcats = SubCategory::select('sub_categories.*', 'categories.name as category')->join('categories', 'categories.id', '=', 'sub_categories.category_id')->latest()->paginate(10);
+        return view('subcategory.index')
+            ->with('subcats', $subcats)
+            ->with('text', $text);
     }
 
     /**
