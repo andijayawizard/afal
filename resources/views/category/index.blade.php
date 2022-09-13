@@ -29,7 +29,9 @@
                         @endforeach
                     </tbody>
                 </table>
-                {{ $categories->links() }}
+                {{-- {{ $categories->links() }} --}}
+                {{-- {!! $categories->withQueryString()->links('pagination::bootstrap-5') !!} --}}
+                {{ $categories->links('pagination::bootstrap-4') }}
             </div>
         </div>
     </div>

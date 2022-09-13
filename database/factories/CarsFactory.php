@@ -17,7 +17,10 @@ class CarsFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'plate' => $this->faker->number_format,
+            'description' => $this->faker->text(),
+            'status' => $this->faker->number_format,
+            'price' => $this->faker->number_format
         ];
     }
 }

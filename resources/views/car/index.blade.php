@@ -23,11 +23,11 @@
                     <tbody>
                         @forelse ($cars as $car)
                             <tr class="border-b transition duration-300 ease-in-out hover:bg-gray-100">
-                                <td class="">{{ $product->id }}</td>
-                                <td class="">{{ $product->name }}</td>
-                                <td class="">{{ $product->category }}</td>
-                                <td class="">{{ $product->name }}</td>
-                                <td class="">{{ $product->category }}</td>
+                                <td class="">{{ $car->id }}</td>
+                                <td class="">{{ $car->name }}</td>
+                                <td class="">{{ $car->category }}</td>
+                                <td class="">{{ $car->name }}</td>
+                                <td class="">{{ $car->category }}</td>
                                 <td class="">Detail | Edit | Delete</td>
                             </tr>
                         @empty

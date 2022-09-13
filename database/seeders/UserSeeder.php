@@ -17,14 +17,15 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $user = User::create([
-            'name' => 'admin',
-            'email' => 'admin@admin.com',
-            'password' => Hash::make('12qwaszx'),
-            'is_admin' => 1
-        ]);
-        UserDetail::create([
-            'user_id' => $user->id
-        ]);
+        User::factory()->count(10)->create();
+        // $user = User::create([
+        //     'name' => 'admin',
+        //     'email' => 'admin@admin.com',
+        //     'password' => Hash::make('12qwaszx'),
+        //     'is_admin' => 1
+        // ]);
+        // UserDetail::create([
+        //     'user_id' => $user->id
+        // ]);
     }
 }

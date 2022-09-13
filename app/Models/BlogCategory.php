@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Car extends Model
+class BlogCategory extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+    protected $fillable = ['name'];
     /**
-     * Get all of the transactions for the Car
+     * Get all of the blog for the BlogCategory
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function transactions()
+    public function blog()
     {
-        return $this->hasMany(Transaction::class, 'car_id', 'id');
+        return $this->hasMany(Blog::class, 'category_id', 'id');
     }
 }
